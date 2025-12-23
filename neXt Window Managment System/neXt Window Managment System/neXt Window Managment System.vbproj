@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>neXt_Window_Managment_System</RootNamespace>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Description>A simple custom window management library</Description>
+    <Copyright>Kaan Divrrikli (C) 2025</Copyright>
+    <AssemblyVersion>0.1.2</AssemblyVersion>
+    <FileVersion>0.3.5</FileVersion>
+	 <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+</Project>
