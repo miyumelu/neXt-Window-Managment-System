@@ -24,35 +24,47 @@ Public Class Window
     ' Variablen
     Private WithEvents _targetPanel As Control
     Private _parentForm As Form
-    Private _isMaxed As Boolean = False
+    Public _isMaxed As Boolean = False
     Private _isAnimating As Boolean = False
 
     Public Property DefaultWidth As Integer
     Public Property DefaultHeight As Integer
 
-    Public Sub New(targetPanel As Control, parentForm As Form)
-        _targetPanel = targetPanel
+    Public Sub New(parentForm As Form)
         _parentForm = parentForm
         _DefaultWidth = parentForm.Width
         _DefaultHeight = parentForm.Height
+    End Sub
 
-        AddHandler _targetPanel.MouseDown, AddressOf OnMouseDown
-        AddHandler _targetPanel.DoubleClick, AddressOf OnDoubleClick
+    ' --- Die neue Methode zum Hinzufügen von Controls ---
+    Public Sub AddControl(ctrl As Control)
+        ' Wir binden die Events an das übergebene Control
+        AddHandler ctrl.MouseDown, AddressOf OnMouseDown
+        AddHandler ctrl.DoubleClick, AddressOf OnDoubleClick
     End Sub
 
     Private Sub OnDoubleClick(sender As Object, e As EventArgs)
         If _isMaxed Then OriginalSize() Else MaximizeFull()
     End Sub
 
-    Private Async Sub OnMouseDown(sender As Object, e As MouseEventArgs)
+    Private Sub OnMouseDown(sender As Object, e As MouseEventArgs)
         If e.Button = MouseButtons.Left Then
             If _isMaxed Then
-                _isMaxed = False
+                _isMaxed = False ' Status sofort ändern
+
+                ' Größe SOFORT setzen (KEINE Animation hier!)
                 _parentForm.Size = New Size(DefaultWidth, DefaultHeight)
-                _parentForm.Location = New Point(Cursor.Position.X - (DefaultWidth \ 2), Cursor.Position.Y - e.Y)
+
+                ' Position unter die Maus setzen
+                Dim mPos = Cursor.Position
+                _parentForm.Location = New Point(mPos.X - (DefaultWidth \ 2), mPos.Y - 15)
+
+                ' UI-Update erzwingen
+                Application.DoEvents()
             End If
+
             ReleaseCapture()
-            SendMessage(_parentForm.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0)
+            SendMessage(_parentForm.Handle, &HA1, 2, 0)
             CheckSnapPosition()
         End If
     End Sub

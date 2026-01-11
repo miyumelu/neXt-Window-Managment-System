@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\deniz\\source\\repos\\neXt Window Managment System\\neXt Window Managment System\\neXt Window Managment System.vbproj",
+      "projectUniqueName": "C:\\Users\\deniz\\Documents\\GitHub\\neXt-Window-Managment-System\\neXt Window Managment System\\neXt Window Managment System\\neXt Window Managment System.vbproj",
       "projectName": "neXt Window Managment System",
-      "projectPath": "C:\\Users\\deniz\\source\\repos\\neXt Window Managment System\\neXt Window Managment System\\neXt Window Managment System.vbproj",
+      "projectPath": "C:\\Users\\deniz\\Documents\\GitHub\\neXt-Window-Managment-System\\neXt Window Managment System\\neXt Window Managment System\\neXt Window Managment System.vbproj",
       "packagesPath": "C:\\Users\\deniz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\deniz\\source\\repos\\neXt Window Managment System\\neXt Window Managment System\\obj\\",
+      "outputPath": "C:\\Users\\deniz\\Documents\\GitHub\\neXt-Window-Managment-System\\neXt Window Managment System\\neXt Window Managment System\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\deniz\\AppData\\Roaming\\NuGet\\NuGet.Config",
