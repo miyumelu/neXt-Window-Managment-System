@@ -41,18 +41,25 @@ Public Class Window
     End Sub
 
     Private Sub OnDoubleClick(sender As Object, e As EventArgs)
-        If _isMaxed Then OriginalSize() Else MaximizeFull()
+        MaximizeFull()
     End Sub
 
     Private Sub OnMouseDown(sender As Object, e As MouseEventArgs)
         If e.Button = MouseButtons.Left Then
+
+            ' --- NEU: Manueller Doppelklick-Check ---
+            If e.Clicks = 2 Then
+                If _isMaxed Then OriginalSize() Else MaximizeFull()
+                Return ' Wichtig: Nach dem Doppelklick kein Dragging starten!
+            End If
+
+            ' --- Bestehende Drag-Logik ---
             If _isMaxed Then
                 _isMaxed = False
                 _parentForm.Size = New Size(DefaultWidth, DefaultHeight)
 
                 Dim mPos = Cursor.Position
-                _parentForm.Location = New Point(mPos.X - (DefaultWidth \ 2), mPos.Y - 15)
-
+                _parentForm.Location = New Point(mPos.X - (DefaultWidth \ 2), mPos.Y - e.Y)
                 Application.DoEvents()
             End If
 
