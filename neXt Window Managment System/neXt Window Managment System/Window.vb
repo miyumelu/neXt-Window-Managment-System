@@ -46,14 +46,11 @@ Public Class Window
 
     Private Sub OnMouseDown(sender As Object, e As MouseEventArgs)
         If e.Button = MouseButtons.Left Then
-
-            ' --- NEU: Manueller Doppelklick-Check ---
             If e.Clicks = 2 Then
                 If _isMaxed Then OriginalSize() Else MaximizeFull()
-                Return ' Wichtig: Nach dem Doppelklick kein Dragging starten!
+                Return
             End If
 
-            ' --- Bestehende Drag-Logik ---
             If _isMaxed Then
                 _isMaxed = False
                 _parentForm.Size = New Size(DefaultWidth, DefaultHeight)
