@@ -69,35 +69,34 @@ The system detects the cursor position relative to the screen's working area (re
 
 ---
 
-##  Example
+##  Example Usage
 
 '''vb.net
 
-Imports System.Drawing
+    Imports System.Drawing
 
-Public Class MainForm
-    
-    Private xwms As Window
-
-    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        xwms = New Window(Me)
+    Public Class MainForm
+        Private xwms As Window
         
-        If pnlTitleBar IsNot Nothing Then
-            xwms.AddControl(pnlTitleBar)
-        End If
+        Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+            xwms = New Window(Me)
+        
+            If drag_panel IsNot Nothing Then
+                xwms.AddControl(drag_panel)
+            End If
 
-        If lblTitle IsNot Nothing Then
-            _windowManager.AddControl(lblTitle)
-        End If
-    End Sub
-
-    Private Sub btnMaximize_Click(sender As Object, e As EventArgs) Handles btnMaximize.Click
-        If xwms._isMaxed Then
-            xwms.OriginalSize()
-        Else
-            xwms.MaximizeFull()
-        End If
-    End Sub
-End Class
-
+            If name_label IsNot Nothing Then
+                xwms.AddControl(name_label)
+            End If
+        End Sub
+        
+        Private Sub btnMaximize_Click(sender As Object, e As EventArgs) Handles btnMaximize.Click
+            If xwms._isMaxed Then
+                xwms.OriginalSize()
+            Else
+                xwms.MaximizeFull()
+            End If
+        End Sub
+    End Class
+    
 '''
