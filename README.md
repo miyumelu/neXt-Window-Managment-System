@@ -71,8 +71,6 @@ The system detects the cursor position relative to the screen's working area (re
 
 ##  Example Usage
 
-'''vb.net
-
     Imports System.Drawing
 
     Public Class MainForm
@@ -98,5 +96,3 @@ The system detects the cursor position relative to the screen's working area (re
             End If
         End Sub
     End Class
-    
-'''
