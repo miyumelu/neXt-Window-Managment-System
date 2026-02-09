@@ -1,4 +1,4 @@
-# neXt Window Management System (DLL)
+# neXt Window Management System (XWMS)
 
 **neXt Window Management System** is a lightweight, high-performance window management library for VB.NET. It enables borderless WinForms applications to behave like modern Windows 11/10 windows, featuring smooth Aero-Snap functionality, quadrant snapping, and asynchronous resize animations.
 
