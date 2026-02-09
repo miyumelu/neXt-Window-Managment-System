@@ -63,11 +63,41 @@ The system detects the cursor position relative to the screen's working area (re
 ---
 
 ##  Technical Requirements
-* **Target Framework**: .NET Framework 4.7.2+ or .NET 6.0/7.0/8.0+
+* **Target Framework**: .NET 6.0/7.0/8.0+
 * **OS**: Windows (Utilizes `user32.dll` for native window messaging).
 * **Environment**: Compatible with all WinForms-supported development environments.
 
 ---
 
-##  License
-Released under the **MIT License**. Feel free to use it in personal or commercial projects.
+##  Example
+
+'''vb.net
+
+Imports System.Drawing
+
+Public Class MainForm
+    
+    Private xwms As Window
+
+    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        xwms = New Window(Me)
+        
+        If pnlTitleBar IsNot Nothing Then
+            xwms.AddControl(pnlTitleBar)
+        End If
+
+        If lblTitle IsNot Nothing Then
+            _windowManager.AddControl(lblTitle)
+        End If
+    End Sub
+
+    Private Sub btnMaximize_Click(sender As Object, e As EventArgs) Handles btnMaximize.Click
+        If xwms._isMaxed Then
+            xwms.OriginalSize()
+        Else
+            xwms.MaximizeFull()
+        End If
+    End Sub
+End Class
+
+'''
