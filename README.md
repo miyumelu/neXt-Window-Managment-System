@@ -63,7 +63,7 @@ The system detects the cursor position relative to the screen's working area (re
 ---
 
 ##  Technical Requirements
-* **Target Framework**: .NET 6.0/7.0/8.0+
+* **Target Framework**: .NET 6.0+
 * **OS**: Windows (Utilizes `user32.dll` for native window messaging).
 * **Environment**: Compatible with all WinForms-supported development environments.
 
@@ -76,6 +76,18 @@ The system detects the cursor position relative to the screen's working area (re
 Currently I work on minimum zones or "Forced Edges", which is to protect the windows. It is intended to prevent the window from entering outside the workspace.
 
 This function is still designed, but should be switchable, but also have a force functions, for things that are important such as the system settings or similar applications that are needed system-wide.
+
+### Curved Corners and Sizable Windows
+
+Since I skip the predefined design of Microsoft and Windows, features such as rounded corners or customizable windows are missing. To fix this comes a new package, which is responsible for them. The design is largely finished and should be implemented shortly.
+
+### Dictionary Communication Layer
+
+With newer features, there are also changeable settings that need to be secured elsewhere. Because of this, the DCL is also used here.
+
+**Information**: The Dictionary Communication Layer is not a separate library but an in-house production for each library. More information about DCL can be found in the MaidNVI book.
+
+---
 
 ##  Example Usage
 
