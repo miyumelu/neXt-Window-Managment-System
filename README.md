@@ -69,6 +69,14 @@ The system detects the cursor position relative to the screen's working area (re
 
 ---
 
+## Current Updates
+
+### Forced Edges
+
+Currently I work on minimum zones or "Forced Edges", which is to protect the windows. It is intended to prevent the window from entering outside the workspace.
+
+This function is still designed, but should be switchable, but also have a force functions, for things that are important such as the system settings or similar applications that are needed system-wide.
+
 ##  Example Usage
 
     Imports System.Drawing
