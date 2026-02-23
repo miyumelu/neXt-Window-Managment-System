@@ -73,13 +73,11 @@ The system detects the cursor position relative to the screen's working area (re
 
 ### Forced Edges
 
-Currently I work on minimum zones or "Forced Edges", which is to protect the windows. It is intended to prevent the window from entering outside the workspace.
-
-This function is still designed, but should be switchable, but also have a force functions, for things that are important such as the system settings or similar applications that are needed system-wide.
+The function has been installed, but the option to turn it off is still missing. This one will come soon.
 
 ### Curved Corners and Sizable Windows
 
-Since I skip the predefined design of Microsoft and Windows, features such as rounded corners or customizable windows are missing. To fix this comes a new package, which is responsible for them. The design is largely finished and should be implemented shortly.
+This function has now been introduced.
 
 ### Dictionary Communication Layer
 
