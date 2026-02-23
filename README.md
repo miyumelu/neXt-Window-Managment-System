@@ -85,6 +85,10 @@ With newer features, there are also changeable settings that need to be secured 
 
 **Information**: The Dictionary Communication Layer is not a separate library but an in-house production for each library. More information about DCL can be found in the MaidNVI book.
 
+## Rebuild
+
+A new construction of the library is planned.
+
 ---
 
 ##  Example Usage
