@@ -18,7 +18,7 @@ Imports System.Reflection
  Assembly: System.Reflection.AssemblyCopyrightAttribute("Kaan Divrrikli (C) 2025"),  _
  Assembly: System.Reflection.AssemblyDescriptionAttribute("A simple custom window management library"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("0.3.5"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92f3ea50704a1c6fde8bf9ee0efb8aa30dc02b93"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0dcc9d1ccdcaa5d5e9e3ce6b9de550118e4fa79"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("neXt Window Managment System"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("neXt Window Managment System"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("0.1.2"),  _
